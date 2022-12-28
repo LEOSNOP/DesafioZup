@@ -10,7 +10,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "src/test/resources/features/cliente.feature",
         glue = "steps",
-        plugin = {"pretty", "html:target/report-HTML", "json:target/report.json"},
+        plugin = {"pretty", "html:target/report-HTML"},
         monochrome = true,
         snippets = SnippetType.CAMELCASE,
         dryRun = false
