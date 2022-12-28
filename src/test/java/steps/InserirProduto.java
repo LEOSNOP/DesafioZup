@@ -19,8 +19,6 @@ import java.io.IOException;
 
 public class InserirProduto {
     WebDriver driver;
-
-
     @Dado("^que estou acessando o site$")
     public void queEstouAcessandoOSite() {
         System.setProperty("webdriver.chrome.driver", "/home/familia/Drivers/chromedriver_linux64/chromedriver");
