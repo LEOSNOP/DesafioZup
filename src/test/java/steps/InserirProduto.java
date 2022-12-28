@@ -2,6 +2,7 @@ package steps;
 
 
 import cucumber.api.PendingException;
+import cucumber.api.java.After;
 import cucumber.api.java.pt.Dado;
 import cucumber.api.java.pt.Entao;
 import org.junit.Assert;
@@ -63,6 +64,13 @@ public class InserirProduto {
     public void verificoSeFoiAdicionadoAoCarrinho() throws Throwable {
         String texto = driver.findElement(By.xpath("//span[@class='a-size-medium-plus a-color-base sw-atc-text a-text-bold']")).getText();
         Assert.assertEquals("Adicionado ao carrinho", texto);
+        System.out.println("adicionado ao carrinho com sucesso");
+    }
+
+    @After
+    public void saindo (){
+        driver.quit();
+        System.out.println("saindo do navegador");
     }
 
 }
