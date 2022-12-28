@@ -39,33 +39,30 @@ public class InserirProduto {
 
     @Entao("^visualizo se estou na pagina de resultados$")
     public void visualizoOsResultadosDaPesquisa() throws Throwable {
-        String texto = driver.findElement(By.xpath("//span[text()='© 2021-2022 Amazon.com, Inc. ou suas afiliadas']")).getText();
-        Assert.assertEquals("© 2021-2022 Amazon.com, Inc. ou suas afiliadas", texto);
-        String verifica =driver.findElement(By.xpath("//span[text()='RESULTADOS']")).getText();
-        Assert.assertEquals("RESULTADOS",verifica);//confirmando se estou na pagina da amazon e se estou na aba de resultados
+        String verifica = driver.findElement(By.xpath("//span[text()='RESULTADOS']")).getText();
+        Assert.assertEquals("RESULTADOS", verifica);//confirmando se estou na pagina da amazon e se estou na aba de resultados
     }
 
-    //driver.findElement(By.xpath("//span[@class='a-size-base-plus a-color-base a-text-normal']")).click();
     @Entao("^depois clico em um produto$")
     public void clicoEmUmProduto() throws Throwable {
-        throw new PendingException();
+        driver.findElement(By.xpath("//span[@class='a-size-base-plus a-color-base a-text-normal']")).click();
     }
 
     @Entao("^depois verifico se tem estoque do produto$")
     public void depoisVerificoSeTemEstoqueDoProduto() throws Throwable {
-        throw new PendingException();
+        String texto = driver.findElement(By.xpath("//span[@class='a-size-medium a-color-success']")).getText();
+        Assert.assertEquals("Em estoque.", texto);
     }
 
     @Entao("^clico no adicionar ao carrinho$")
     public void clicoNoAdicionarAoCarrinho() throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
+       driver.findElement(By.id("add-to-cart-button")).click();
     }
 
     @Entao("^verifico se foi adicionado ao carrinho$")
     public void verificoSeFoiAdicionadoAoCarrinho() throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
+        String texto = driver.findElement(By.xpath("//span[@class='a-size-medium-plus a-color-base sw-atc-text a-text-bold']")).getText();
+        Assert.assertEquals("Adicionado ao carrinho", texto);
     }
 
 }
