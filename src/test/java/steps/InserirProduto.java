@@ -37,20 +37,22 @@ public class InserirProduto {
         System.out.println("pesquisa feita");// confirmando no console esse passo foi feito
     }
 
-    @Entao("^visualizo os resultados da pesquisa$")
+    @Entao("^visualizo se estou na pagina de resultados$")
     public void visualizoOsResultadosDaPesquisa() throws Throwable {
-        throw new PendingException();
+        String texto = driver.findElement(By.xpath("//span[text()='© 2021-2022 Amazon.com, Inc. ou suas afiliadas']")).getText();
+        Assert.assertEquals("© 2021-2022 Amazon.com, Inc. ou suas afiliadas", texto);
+        String verifica =driver.findElement(By.xpath("//span[text()='RESULTADOS']")).getText();
+        Assert.assertEquals("RESULTADOS",verifica);//confirmando se estou na pagina da amazon e se estou na aba de resultados
     }
 
-    @Entao("^clico em um produto$")
+    //driver.findElement(By.xpath("//span[@class='a-size-base-plus a-color-base a-text-normal']")).click();
+    @Entao("^depois clico em um produto$")
     public void clicoEmUmProduto() throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
         throw new PendingException();
     }
 
     @Entao("^depois verifico se tem estoque do produto$")
     public void depoisVerificoSeTemEstoqueDoProduto() throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
         throw new PendingException();
     }
 

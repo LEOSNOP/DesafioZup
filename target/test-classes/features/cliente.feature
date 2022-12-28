@@ -10,8 +10,8 @@
     Entao visualizo a pagina inicial
     E pesquiso por um produto
     E aperto no botao de pesquisar
-    Entao visualizo os resultados da pesquisa
-    E clico em um produto
+    Entao visualizo se estou na pagina de resultados
+    E depois clico em um produto
     E depois verifico se tem estoque do produto
     Entao clico no adicionar ao carrinho
     E verifico se foi adicionado ao carrinho
