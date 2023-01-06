@@ -6,6 +6,6 @@
 - Cucumber
 - Maven 
 
--- dependencias estao tudo no arquivo pom.xml
+-- dependencias estao no arquivo pom.xml
 
 
