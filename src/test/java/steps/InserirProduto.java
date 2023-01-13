@@ -46,7 +46,7 @@ public class InserirProduto {
 
     @Entao("^visualizo se estou na pagina de resultados$")
     public void visualizoOsResultadosDaPesquisa() {
-        String verifica = driver.findElement(By.xpath("//*[@id=\"search\"]/div[1]/div[1]/div/span[1]/div[1]/div[2]/div/span/div/div/span")).getText();
+        String verifica = driver.findElement(By.xpath("//span[text()='RESULTADOS']")).getText();
         Assert.assertEquals("RESULTADOS", verifica);//confirmando se estou na pagina da amazon e se estou na aba de resultados
     }
 

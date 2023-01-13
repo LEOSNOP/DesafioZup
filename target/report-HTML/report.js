@@ -69,71 +69,71 @@ formatter.match({
   "location": "InserirProduto.queEstouAcessandoOSite()"
 });
 formatter.result({
-  "duration": 84939060272,
+  "duration": 5710377348,
   "status": "passed"
 });
 formatter.match({
   "location": "InserirProduto.visualizoAPaginaInicial()"
 });
 formatter.result({
-  "duration": 2391652151,
+  "duration": 103613356,
   "status": "passed"
 });
 formatter.match({
   "location": "InserirProduto.pesquisoPorUmProduto()"
 });
 formatter.result({
-  "duration": 2477698165,
+  "duration": 275557049,
   "status": "passed"
 });
 formatter.match({
   "location": "InserirProduto.apertoNoBotaoDePesquisar()"
 });
 formatter.result({
-  "duration": 15552043200,
+  "duration": 2390606225,
   "status": "passed"
 });
 formatter.match({
   "location": "InserirProduto.visualizoOsResultadosDaPesquisa()"
 });
 formatter.result({
-  "duration": 211653147,
+  "duration": 59639542,
   "status": "passed"
 });
 formatter.match({
   "location": "InserirProduto.clicoEmUmProduto()"
 });
 formatter.result({
-  "duration": 15053991087,
+  "duration": 3790738784,
   "status": "passed"
 });
 formatter.match({
   "location": "InserirProduto.depoisVerificoSeTemEstoqueDoProduto()"
 });
 formatter.result({
-  "duration": 576312936,
+  "duration": 69590771,
   "status": "passed"
 });
 formatter.match({
   "location": "InserirProduto.clicoNoAdicionarAoCarrinho()"
 });
 formatter.result({
-  "duration": 1953905061,
+  "duration": 1483799150,
   "status": "passed"
 });
 formatter.match({
   "location": "InserirProduto.verificoSeFoiAdicionadoAoCarrinho()"
 });
 formatter.result({
-  "duration": 167499701,
+  "duration": 110742364,
   "status": "passed"
 });
 formatter.after({
-  "duration": 469700557,
+  "duration": 301827445,
   "status": "passed"
 });
 formatter.after({
-  "duration": 665852811,
+  "duration": 120614968,
   "status": "passed"
 });
 });
