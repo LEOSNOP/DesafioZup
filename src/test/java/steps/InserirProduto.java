@@ -28,8 +28,8 @@ public class InserirProduto {
 
     @Entao("^visualizo a pagina inicial$")
     public void visualizoAPaginaInicial() {
-        String texto = driver.findElement(By.xpath("//span[text()='© 2021-2022 Amazon.com, Inc. ou suas afiliadas']")).getText();
-        Assert.assertEquals("© 2021-2022 Amazon.com, Inc. ou suas afiliadas", texto);// verificando se estou na pagina da amazon
+        String texto = driver.findElement(By.xpath("//span[text()='© 2021-2023 Amazon.com, Inc. ou suas afiliadas']")).getText();
+        Assert.assertEquals("© 2021-2023 Amazon.com, Inc. ou suas afiliadas", texto);// verificando se estou na pagina da amazon
 
     }
 
@@ -46,7 +46,7 @@ public class InserirProduto {
 
     @Entao("^visualizo se estou na pagina de resultados$")
     public void visualizoOsResultadosDaPesquisa() {
-        String verifica = driver.findElement(By.xpath("//span[@class='a-size-medium-plus a-color-base a-text-normal']")).getText();
+        String verifica = driver.findElement(By.xpath("//*[@id=\"search\"]/div[1]/div[1]/div/span[1]/div[1]/div[2]/div/span/div/div/span")).getText();
         Assert.assertEquals("RESULTADOS", verifica);//confirmando se estou na pagina da amazon e se estou na aba de resultados
     }
 
