@@ -28,14 +28,18 @@ public class InserirProduto {
 
     @Entao("^visualizo a pagina inicial$")
     public void visualizoAPaginaInicial() {
+        String verifica = "© 2021-2023 Amazon.com, Inc. ou suas afiliadas";
+
         String texto = driver.findElement(By.xpath("//span[text()='© 2021-2023 Amazon.com, Inc. ou suas afiliadas']")).getText();
-        Assert.assertEquals("© 2021-2023 Amazon.com, Inc. ou suas afiliadas", texto);// verificando se estou na pagina da amazon
+        Assert.assertEquals(verifica, texto);// verificando se estou na pagina da amazon
 
     }
 
     @Entao("^pesquiso por um produto$")
     public void pesquisoPorUmProduto() {
-        driver.findElement(By.id("twotabsearchtextbox")).sendKeys("fone de ouvido");// fazendo a pesquisa de um produto
+        String pesquisa = "fone de ouvido";
+
+        driver.findElement(By.id("twotabsearchtextbox")).sendKeys(pesquisa);// fazendo a pesquisa de um produto
     }
 
     @Entao("^aperto no botao de pesquisar$")
@@ -57,13 +61,20 @@ public class InserirProduto {
 
     @Entao("^depois verifico se tem estoque do produto$")
     public void depoisVerificoSeTemEstoqueDoProduto() {
-        String texto = driver.findElement(By.xpath("//span[@class='a-size-medium a-color-success']")).getText();
-        Assert.assertEquals("Em estoque.", texto);
+       String verifica = "Em estoque.";
+
+       String verifica1 = "Estimativa de envio de 2 a 3 dias.";
+
+       try{ String texto = driver.findElement(By.xpath("//span[@class='a-size-medium a-color-success']")).getText();
+        Assert.assertEquals(verifica, texto);}catch (RuntimeException e){
+           String texto = driver.findElement(By.xpath("//span[@class='a-size-medium a-color-state']")).getText();
+           Assert.assertEquals(verifica1, texto);
+       }
     }
 
     @Entao("^clico no adicionar ao carrinho$")
     public void clicoNoAdicionarAoCarrinho() {
-       driver.findElement(By.id("add-to-cart-button")).click();
+       driver.findElement(By.id("add-to-cart-button")).click();// adicionando ao carrinho
     }
 
     @Entao("^verifico se foi adicionado ao carrinho$")
