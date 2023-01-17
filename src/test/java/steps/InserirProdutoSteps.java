@@ -17,7 +17,7 @@ import java.io.File;
 import java.io.IOException;
 
 
-public class InserirProduto {
+public class InserirProdutoSteps {
     WebDriver driver;
     @Dado("^que estou acessando o site$")
     public void queEstouAcessandoOSite() {
