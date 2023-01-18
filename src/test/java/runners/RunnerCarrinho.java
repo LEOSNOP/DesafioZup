@@ -1,6 +1,5 @@
 package runners;
 
-
 import cucumber.api.CucumberOptions;
 import cucumber.api.SnippetType;
 import cucumber.api.junit.Cucumber;
@@ -8,13 +7,16 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features = "src/test/resources/features/cliente.feature",
+        features = "src/test/resources/features/carrinho.feature",
         glue = "steps",
-        plugin = {"pretty", "html:target/report-HTML"},
+        tags = "@caminho_alternativo1",
+        plugin = "pretty",
         monochrome = true,
         snippets = SnippetType.CAMELCASE,
         dryRun = false
 )
 
-public class Runner {
+
+
+public class RunnerCarrinho {
 }
