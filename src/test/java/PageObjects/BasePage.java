@@ -5,6 +5,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import static entidades.TimerSleeper.timesleep;
+
 
 public class BasePage {
     WebDriver driver;
@@ -23,6 +25,7 @@ public class BasePage {
     public void entrando_no_site(){
         this.driver.get("https://www.amazon.com.br/");
         System.out.println("entrando no site");
+        timesleep(2000);
     }
     public void saindo_do_navegador(){
         this.driver.quit();
@@ -31,12 +34,14 @@ public class BasePage {
     public void validando_site(){
        String texto = driver.findElement(By.xpath(verificando_pagina_xpath)).getText();
         Assert.assertEquals(verificador_da_pagina, texto);
+        timesleep(1000);
     }
 
 
     public void verificando_pagina(String elemento_xpath, String verifica){
     String texto =driver.findElement(By.xpath(elemento_xpath)).getText();
     Assert.assertEquals(verifica, texto);
+    timesleep(1000);
     }
 
 }
