@@ -23,7 +23,7 @@ public class BasePage {
     }
 
     public void entrando_no_site(){
-        this.driver.get("https://www.amazon.com.br/");
+        this.driver.get(acessando_site);
         System.out.println("entrando no site");
         timesleep(2000);
     }

@@ -30,9 +30,9 @@
     E clica no produto
     Entao faz uma verificação se o produto esta no carrinho
 
-    Exemplos:
-      |produto      |
-      |"headset hyperx"|
+      Exemplos:
+        |produto         |
+        |"headset hyperx"|
 
     @caminho_alternativo3
     Esquema do Cenário:usuario adiciona ao carrinho e tira o item do carrinho
@@ -43,6 +43,6 @@
       Entao o usuario tira o produto do carrinho
 
 
-      Exemplos:
-        |produto         |
-        |"headset hyperx"|
+        Exemplos:
+          |produto         |
+          |"headset hyperx"|
