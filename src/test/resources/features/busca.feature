@@ -30,7 +30,7 @@
       Exemplos: lista da busca de produtos invalidos
         |produto_invalido|
         |"80590sd0a9sf09sas09f"|
-        |"uaw234ii2"           |
+        |"55asdakfr3"          |
         |"23441252"            |
 
     @naoExecuta @caminho_alternativo3
