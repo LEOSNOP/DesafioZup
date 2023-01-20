@@ -43,8 +43,7 @@ public class CarrinhoSteps {
 
     @Entao("^faz uma verificação se o produto esta no carrinho$")
     public void faz_uma_verificação_se_o_produto_esta_no_carrinho() throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
+        cart.verifica_carrinho_sem_produto();
     }
 
     @Entao("^o usuario tira o produto do carrinho$")

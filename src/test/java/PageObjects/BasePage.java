@@ -25,7 +25,7 @@ public class BasePage {
     public void entrando_no_site(){
         this.driver.get(acessando_site);
         System.out.println("entrando no site");
-        timesleep(2000);
+        timesleep(3000);
     }
     public void saindo_do_navegador(){
         this.driver.quit();

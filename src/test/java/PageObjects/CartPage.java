@@ -26,6 +26,8 @@ public class CartPage extends BasePage {
 
     private By lista_do_carrinho = By.xpath("//div[@class='sc-list-item-content']");
 
+    private By carrinho_vazio = By.xpath("//h2[text()]");
+
     public void pesquisar(String busca){
         driver.findElement(barra_de_pesquisa).sendKeys(busca);
         driver.findElement(botao_pesquisar).click();
@@ -76,6 +78,14 @@ public class CartPage extends BasePage {
         timesleep(1000);
         driver.findElement(lista_do_carrinho);
         timesleep(1000);
+    }
+
+    public void verifica_carrinho_sem_produto(){
+        String verif = "Seu carrinho da Amazon está vazio";
+        driver.findElement(click_carrinho).click();
+        timesleep(1000);
+        String text = driver.findElement(carrinho_vazio).getText();
+        Assert.assertEquals(text,verif);
     }
 
 
