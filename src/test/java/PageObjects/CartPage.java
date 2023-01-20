@@ -28,6 +28,10 @@ public class CartPage extends BasePage {
 
     private By carrinho_vazio = By.xpath("//h2[text()]");
 
+    private By botao_excluir_do_carrinho = By.xpath("//input[@class='a-color-link']");
+
+    private By depois_de_excluir_do_carrinho = By.xpath("//h1[text()]");
+
     public void pesquisar(String busca){
         driver.findElement(barra_de_pesquisa).sendKeys(busca);
         driver.findElement(botao_pesquisar).click();
@@ -88,5 +92,12 @@ public class CartPage extends BasePage {
         Assert.assertEquals(text,verif);
     }
 
+    public void tirando_produto_carrinho(){
+        String verif = "Seu carrinho de compras da Amazon está vazio.";
+        driver.findElement(botao_excluir_do_carrinho).click();
+        timesleep(1000);
+        String text = driver.findElement(depois_de_excluir_do_carrinho).getText();
+        Assert.assertEquals(text, verif);
+    }
 
 }
