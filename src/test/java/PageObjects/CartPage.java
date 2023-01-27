@@ -2,9 +2,13 @@ package PageObjects;
 
 import org.junit.Assert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+
 import static entidades.TimerSleeper.timesleep;
 
 public class CartPage extends BasePage {
+
+    JavascriptExecutor js = (JavascriptExecutor)driver;
 
     private By cartPage_barra_de_pesquisa = By.xpath("//input[@id='twotabsearchtextbox']");
 
@@ -38,12 +42,14 @@ public class CartPage extends BasePage {
         timesleep(1000);
         verificacao_pesquisa();
         timesleep(1000);
+
     }
     private void verificacao_pesquisa(){
         String verif = "RESULTADOS";
         verificando_pagina(cartPage_resultados_da_pesquisa, verif);
         driver.findElement(By.xpath("//div[@data-index='7']"));
         timesleep(1000);
+        js.executeScript("window.scroll(0,300)");
     }
 
     public void clicando_no_produto(){
