@@ -10,7 +10,7 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features/carrinho.feature",
         glue = "steps",
         //tags = "@caminho_alternativo3",
-        plugin = "pretty",
+        plugin = {"pretty", "html:target/report_html_cart"},
         monochrome = true,
         snippets = SnippetType.CAMELCASE,
         dryRun = false

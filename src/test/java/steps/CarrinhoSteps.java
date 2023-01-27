@@ -59,12 +59,12 @@ public class CarrinhoSteps {
         cart.ScreenShot("Cart_tirando_do_carrinho");
     }
 
-    @After
+    @After(order = 1)
     public void Fim_do_teste(Scenario cenario){
         cart.ScreenShot("FimDoTeste/cart"+ cenario);
     }
 
-    @After()
+    @After(order = 0)
     public void saindo(){
         cart.saindo_do_navegador();
     }
