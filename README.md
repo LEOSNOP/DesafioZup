@@ -31,6 +31,7 @@ Para a criação dos cenários de testes devem ser considerados casos de sucesso
 com base nos Requisitos começei a fazer as features, que no caso são duas, uma para busca, e outra para o carrinho de compras.
 
 Funcionalidade: busca de produtos
+    
     Como um usuario na pagina da Amazon
     quero fazer a busca por um produto
     e validar o retorno dessa busca
