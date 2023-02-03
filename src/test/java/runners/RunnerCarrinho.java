@@ -9,7 +9,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "src/test/resources/features/carrinho.feature",
         glue = "steps",
-        //tags = "@caminho_alternativo3",
+        tags = "@caminho03",
         plugin = {"pretty", "html:target/report_html_cart"},
         monochrome = true,
         snippets = SnippetType.CAMELCASE,
