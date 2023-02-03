@@ -13,7 +13,7 @@
     Entao verifica se url da o acesso na pagina da amazon
 
 
-  @caminho_alternativo1
+  @caminho01
   Esquema do Cenário: usuario adiciona carrinho
     Quando o usuario faz a busca por um <produto>
     E clica no produto
@@ -24,7 +24,7 @@
         |produto      |
         |"headset hyperx"|
 
-  @caminho_alternativo2
+  @caminho02
   Esquema do Cenário:usuario nao adiciona ao carrinho
     Quando o usuario faz a busca por um <produto>
     E clica no produto
@@ -34,7 +34,7 @@
         |produto         |
         |"headset hyperx"|
 
-    @caminho_alternativo3
+    @caminho03
     Esquema do Cenário:usuario adiciona ao carrinho e tira o item do carrinho
       Quando o usuario faz a busca por um <produto>
       E clica no produto

@@ -10,8 +10,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "src/test/resources/features/busca.feature",
         glue = "steps",
-
-        //tags = "@caminho_alternativo1",
+        tags = "@caminho04",
         plugin = {"pretty", "html:target/report_html_busca"},
         monochrome = true,
         snippets = SnippetType.CAMELCASE,
