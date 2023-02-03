@@ -48,7 +48,6 @@ public class CartPage extends BasePage {
 
     public void abrindo_pagina(){
         driver.get(url);
-        timesleep(1000);
     }
     public boolean verificando_pagina(){
         String verif = "© 2021-2023 Amazon.com, Inc. ou suas afiliadas";
@@ -84,7 +83,6 @@ public class CartPage extends BasePage {
         driver.findElement(cartPage_botao_add_carrinho).click();
         timesleep(2000);
     }
-
     public boolean verificando_carrinho1(){
         String verif = "Adicionado ao carrinho";
         String texto = driver.findElement(cartPage_verificacao_carrinho1).getText();
@@ -105,19 +103,16 @@ public class CartPage extends BasePage {
         timesleep(1000);
         return true;
     }
-
     public boolean carrinho_vazio(){
         String verif = "Seu carrinho da Amazon está vazio";
         String texto = driver.findElement(cartPage_carrinho_vazio).getText();
         Assert.assertEquals(verif, texto);
         return true;
     }
-
     public void click_excluir_do_carrinho(){
         driver.findElement(cartPage_botao_excluir_do_carrinho).click();
         timesleep(1000);
     }
-
     public boolean verificando_exclusao_do_carrinho(){
         String verif = "Seu carrinho de compras da Amazon está vazio.";
         String texto = driver.findElement(cartPage_verifica_exclusao_do_carrinho).getText();

@@ -3,6 +3,7 @@ package steps;
 import PageObjects.CartPage;
 import basePages.BaseStep;
 import cucumber.api.PendingException;
+import cucumber.api.Scenario;
 import cucumber.api.java.After;
 import cucumber.api.java.pt.Dado;
 import cucumber.api.java.pt.Entao;
@@ -15,12 +16,13 @@ public class CarrinhoSteps extends BaseStep {
 
     @Dado("^que o usuario acessa a pagina da amazon$")
     public void que_o_usuario_acessa_a_pagina_da_amazon() throws Throwable {
-        pagina.abrindo_pagina();
+      pagina.abrindo_pagina();
     }
 
     @Entao("^verifica se url da o acesso na pagina da amazon$")
     public void verifica_se_url_da_o_acesso_na_pagina_da_amazon() throws Throwable {
         Assert.assertTrue(pagina.verificando_pagina());
+        //BaseStep.Screenshot();
     }
 
     @Quando("^o usuario faz a busca por um \"([^\"]*)\"$")
@@ -58,16 +60,5 @@ public class CarrinhoSteps extends BaseStep {
         pagina.click_excluir_do_carrinho();
         Assert.assertTrue(pagina.verificando_exclusao_do_carrinho());
     }
-
-    @After(order = 1)
-    public void Fim_do_teste(){
-
-    }
-
-    @After(order = 0)
-    public void saindo(){
-        pagina.saindo();
-    }
-
 
 }

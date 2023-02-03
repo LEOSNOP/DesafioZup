@@ -65,14 +65,4 @@ public class BuscaSteps extends BaseStep {
 
     }
 
-    @After(order = 1)
-    public void ScreenshotAfter(Scenario cenario){
-
-    }
-
-    @After(order = 0)
-    public void terminando(){
-        pagina.saindo();
-    }
-
 }
