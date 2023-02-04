@@ -8,12 +8,13 @@ import cucumber.api.java.Before;
 public class Hook {
 
     @Before
-    public void BeforeAllTest(Scenario _scenario) throws Throwable {
+    public void BeforeAllTest() throws Throwable {
         BaseStep.abrindo_nav();
     }
 
     @After
-    public void AfterAllTest() throws Throwable {
+    public void AfterAllTest(Scenario scenario) throws Throwable {
+        BaseStep.Screenshot("Fim do test/"+ scenario.getName());
         BaseStep.saindo_nav();
     }
 

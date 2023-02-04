@@ -9,14 +9,12 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "src/test/resources/features/carrinho.feature",
         glue = "steps",
-        tags = "@caminho03",
+        //tags = "@caminho02",
         plugin = {"pretty", "html:target/report_html_cart"},
         monochrome = true,
         snippets = SnippetType.CAMELCASE,
         dryRun = false
 )
-
-
 
 public class RunnerCarrinho {
 }
