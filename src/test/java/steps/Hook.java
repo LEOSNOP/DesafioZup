@@ -14,7 +14,7 @@ public class Hook {
 
     @After
     public void AfterAllTest(Scenario scenario) throws Throwable {
-        BaseStep.Screenshot("Fim do test/"+ scenario.getName());
+        BaseStep.Screenshot("Fim do test/"+ scenario.getId());
         BaseStep.saindo_nav();
     }
 
