@@ -57,9 +57,9 @@ Cenarios do Carrinho de Compras
 2- Cenario Carrinho - clica no produto sem adicionar ao carrinho
 3- Cenario Carrinho - adiciona ao carrinho e tira o item do carrinho
 
-# PageObejcts 
+# PageObjects 
 
-Antes de começar a fazer os PageObejcts comecei a fazer os Runners 
+Antes de começar a fazer os PageObjects comecei a fazer os Runners 
 para configurar os Steps e os Cenarios, quando isso foi concluido 
 
 comecei a fazer os PageObjects que estao disponiveis na pasta src/test/java/PageObjects
