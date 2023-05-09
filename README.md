@@ -47,14 +47,19 @@ a partir disso comecei a fazer os cenarios
 Cenarios da Busca
 
 1- Cenario busca - valida
+
 2- Cenario busca - invalida
+
 3- Cenario busca - generica
+
 4- Cenario busca - em branco
 
 Cenarios do Carrinho de Compras
 
 1- Cenario Carrinho - adicionar ao carrinho
+
 2- Cenario Carrinho - clica no produto sem adicionar ao carrinho
+
 3- Cenario Carrinho - adiciona ao carrinho e tira o item do carrinho
 
 # PageObjects 
